@@ -45,19 +45,15 @@ def main():
     parser.add_argument('--num_tasks', type=int, default=6, help='number of tasks')
     parser.add_argument('--num_classes', type=int, default=6, help='number of classes')
     parser.add_argument('--num_classes_per_task', type=int, default=1, help='number of classes per task')
-    parser.add_argument('--num_iters', type=int, default=1, help='number of pruning iterations')   # 3
+    parser.add_argument('--num_iters', type=int, default=1, help='number of pruning iterations')  
     parser.add_argument('--prune_batch_size', type=int, default=100, help='number of examples for pruning')
     parser.add_argument('--batch_size', type=int, default=20, help='number of examples per training batch')
     parser.add_argument('--test_batch_size', type=int, default=1, help='number of examples per test batch')
-    parser.add_argument('--train_epochs', type=int, default=10, help='number training epochs')      # 40
-    parser.add_argument('--retrain_epochs', type=int, default=5, help='number of retraining epochs after pruning') #30
+    parser.add_argument('--train_epochs', type=int, default=10, help='number training epochs')      
+    parser.add_argument('--retrain_epochs', type=int, default=5, help='number of retraining epochs after pruning') 
     parser.add_argument('--optimizer_name', type=str, default='Adam', help='optimizer')
     parser.add_argument('--criterion_name', type=str, default='DiceBCE', help='optimizer')
-    parser.add_argument('--lr_decay_type', type=str, default='multistep', help='learning rate decay type')
-    parser.add_argument('--lr', type=float, default=1e-3, help='initial learning rate')                   # 1e-2 SGD; 1e-3 Adam
-    parser.add_argument('--decay_epochs_train', nargs='+', type=int, default=[5], help='epochs for multistep decay')  # [20, 30]
-    parser.add_argument('--decay_epochs_retrain', nargs='+', type=int, default=[3], help='epochs for multistep decay')   # [8, 15]
-    parser.add_argument('--gamma', type=float, default=0.1, help='multiplicative factor of learning rate decay')   # 0.1
+    parser.add_argument('--lr', type=float, default=1e-3, help='initial learning rate')                   
     parser.add_argument('--wd', type=float, default=1e-4, help='weight decay during retraining')         
     parser.add_argument('--seed', type=int, default=0, help='seed')
     parser.add_argument('--directory', type=str, default="result", help='directory to save results')
