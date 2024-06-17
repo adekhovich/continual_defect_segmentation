@@ -62,7 +62,7 @@ python3 -m src.main --dataset 'magnetic-tile'\
                      --num_tasks 5 --num_classes 5 --alpha_conv 0.85 --num_iters 1\
                      --order_num 0\
                      --criterion_name IoU\
-                     --train_epochs 2 --lr 1e-4 --wd 0.0 --batch_size 8\
+                     --train_epochs 200 --lr 1e-4 --wd 0.0 --batch_size 8\
                      --seed 0
 ```
 
