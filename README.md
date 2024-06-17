@@ -19,6 +19,36 @@ cd continual_defect_segmentation
 pip install -r requirements.txt
 ```
 
+## Train the model
+
+Run the code with:
+```
+python3 src/main.py
+
+Possible arguments:
+--problem               type of a problem ('segmentation' or 'classification')
+--approach              approach for training ('cps', 'joint' or 'finetuning')
+--classifier            name of task prediction algorithm ('LDA')
+--dataset_name          dataset to use ('sd-900' or 'magnetic-tile')
+
+--input_channels        number of input channels (default: 1)
+--hidden_channels       number of hidden channels of UNet (default: 16)
+--output_channels       number of outputchannels of UNet (default: 1)
+
+--alpha_conv           fraction of importance to keep in conv layers (default: 0.95)
+--num_iters            number of pruning iterations (default: 1)
+--order_num            defect order (default=0)
+
+--batch_size           number of images per training batch (default: 8)
+--train_epochs         number training epochs (default: 200)   
+--optimizer_name'      optimizer (default: Adam)
+--criterion_name       loss (default: IoU)
+--lr                   initial learning rate (default: 1e-4)                   
+--wd                   weight decay (default: 0.0)         
+--seed                 seed (default: 0)
+
+```
+
 
 ## Citation
 
