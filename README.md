@@ -41,7 +41,7 @@ Possible arguments:
 
 --batch_size           number of images per training batch (default: 8)
 --train_epochs         number training epochs (default: 200)   
---optimizer_name'      optimizer (default: Adam)
+--optimizer_name       optimizer (default: Adam)
 --criterion_name       loss (default: IoU)
 --lr                   initial learning rate (default: 1e-4)                   
 --wd                   weight decay (default: 0.0)         
