@@ -33,7 +33,7 @@ Possible arguments:
 
 --input_channels        number of input channels (default: 1)
 --hidden_channels       number of hidden channels of UNet (default: 16)
---output_channels       number of outputchannels of UNet (default: 1)
+--output_channels       number of output channels of UNet (default: 1)
 
 --alpha_conv           fraction of importance to keep in conv layers (default: 0.95)
 --num_iters            number of pruning iterations (default: 1)
